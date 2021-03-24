@@ -117,12 +117,12 @@ function App() {
 <div className="italic text-sm w-1/3">Subsemnata/subsemnatul cunosc prevederile art. 326 din Codul penal cu privire la falsul în declarații coroborat cu art. 352 din Codul penal referitor la zădărnicirea combaterii bolilor.</div>
 
 
-<div className="footer flex flex-row flex-nowrap justify-around align-left w-1/3">
-  <div className="mr-12">Semnătura 
+<div className="footer flex flex-row flex-wrap sm:flex-nowrap justify-around  ml-8 w-1/3">
+  <div className="mr-2 mb-2">Semnătura 
     
     {signatureDone ? <img className="w-auto" alt="GeneratedSignature - Declaratie"
           src={trimmedDataURL} /> : <SignatureCanvas penColor='black'
-    canvasProps={{width: 200, height: 200, className: 'sigCanvas border-2 border-gray-700 rounded-xl'}} ref={(ref) => { sigPad = ref }} />}
+    canvasProps={{width: 200, height: 200, className: "sigCanvas border-2 border-gray-700 rounded-xl" }} ref={(ref) => { sigPad = ref }} />}
     </div>
 
   <div>Data <DatePicker selected={startDate} onChange={date => setStartDate(date)} className="focus:outline-none  border-2 border-gray-700 rounded-xl p-2" /></div>
